@@ -6,17 +6,20 @@ const manualSort = (arr) => {
 
     while(leftIndex < rightIndex){
 
+
         let temp = arr[leftIndex]
 
+        //swaping each end 
         arr[leftIndex] = arr[rightIndex]
         arr[rightIndex] = temp
 
-        console.log(arr[leftIndex])
-
+        //each rotation pushses the array to converge, while changing the rotating idx
         leftIndex++; 
         rightIndex--; 
     }
     console.log(arr)
 }
 
-manualSort([1,2,3,4])
+manualSort([ 'c', 'a', 'k', 'e', ' ',
+'p', 'o', 'u', 'n', 'd', ' ',
+'s', 't', 'e', 'a', 'l' ])
