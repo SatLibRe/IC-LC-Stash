@@ -1,6 +1,6 @@
 //manual sort 
 
-const manualSort = (arr) => {
+const manualReverse = (arr) => {
     let leftIndex = 0
     let rightIndex = arr.length - 1
 
@@ -20,6 +20,6 @@ const manualSort = (arr) => {
     console.log(arr)
 }
 
-manualSort([ 'c', 'a', 'k', 'e', ' ',
+manualReverse([ 'c', 'a', 'k', 'e', ' ',
 'p', 'o', 'u', 'n', 'd', ' ',
 's', 't', 'e', 'a', 'l' ])
