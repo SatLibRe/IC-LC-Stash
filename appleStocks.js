@@ -24,8 +24,6 @@ var maxProfit = function(prices) {
     for(let i = prices.length -1 ; i >= 0; i-- ){
         stockMax = Math.max(prices[i], stockMax)
         maxDif = Math.max(maxDif, stockMax - prices[i])
-        console.log(stockMax, "stockMax")
-        console.log(maxDif, "maDIf")
     }
     return maxDif
 };
