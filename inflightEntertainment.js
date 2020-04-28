@@ -1,6 +1,6 @@
 
 const flightTime = 120
-const flightMovies = [100,2,45,89]
+const flightMovies = [100,20,45,89]
 
 const flightMoviesChecker = (flightTime, flightMovies) => {
     
