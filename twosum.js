@@ -24,9 +24,7 @@ var twoSum = function(nums,target) {
 
   ///alt solution 
   var maxProfit = function(prices) {
-    
-    let stockMax = 0
-    let maxDif = 0
+
     
     for(let i = prices.length -1 ; i >= 0; i-- ){
         stockMax = Math.max(prices[i], stockMax)
