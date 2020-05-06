@@ -8,7 +8,7 @@ const binSearch = (target,nums) => {
     while(floorIdx + 1 < ceilIdx){
         const distance = ceilIdx - floorIdx
         const halfDistance = Math.floor(distance / 2)
-        const guessIdx = floor + halfDistance
+        const guessIdx = floorIdx + halfDistance
 
         const guessValue = nums[guessIdx]
         
@@ -23,3 +23,5 @@ const binSearch = (target,nums) => {
     }
     return false 
 }
+
+console.log(binSearch(5, [1,2,3,4,5]))
