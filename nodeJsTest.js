@@ -1,16 +1,31 @@
-let initialMemory = process.memoryUsage().heapUsed;
-let word = process.argv[2];
-let name = process.argv[3];
+let secretValue = Math.floor(1+Math.random()*10).toString();
 
-console.log(`Your word is ${word} and your name is ${name}`)
+let numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 
-// Create a new array
-let wordArray = [];
 
-// Loop 1000 times, pushing into the array each time 
-for (let i = 0; i < 1000; i++){
-  wordArray.push(`${word} count: ${i}`)
-}
+  const testNumber = (input) => {
+   if (input === 'quit') {
+    process.stdout.write('Ok. Bye!\n')
+    process.exit();
+  }
+  if (!numbers.includes(input)) {
+    process.stdout.write('Choose a number from 1 through 10!\nIs the number ... ')
+  } else if (input === secretValue) {
+    process.stdout.write('Woah you got it! Are you psychic? See you later!\n')
+    process.exit();
+  } else {
+    process.stdout.write("Nope. Guess again!\nIs the number ... ");
+  }
+  }
 
-console.log(`Starting memory usage: ${initialMemory}. \nCurrent memory usage: ${process.memoryUsage().heapUsed}. \nAfter using the loop to add elements to the array, the process is using ${process.memoryUsage().heapUsed - initialMemory} more bytes of memory.`)
 
+// let {testNumber} = require('./game.js');
+
+process.stdout.write("I'm thinking of a number from 1 through 10. What do you think it is? \n(Write \"quit\" to give up.)\n\nIs the number ... ");
+
+let playGame = (userInput) => {
+  let input = userInput.toString().trim();
+	testNumber(input);
+};
+
+process.stdin.on('data', playGame);
